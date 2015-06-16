@@ -1,0 +1,29 @@
+{
+  "name": "Classy-belt",
+  "main": "classy.js",
+  "version": "0.0.5",
+  "authors": [
+    "Nicky Laczko"
+  ],
+  "description": "A classy utility helper.",
+  "keywords": [
+   "utility",
+    "belt",
+    "handler",
+    "helper",
+    "essentials",
+    "project-helper",
+    "core",
+    "posh"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "lib",
+    "docs"
+  ]
+}

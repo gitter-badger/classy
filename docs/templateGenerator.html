@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>templateGenerator.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="consoleMessages.html">
+                  consoleMessages.js
+                </a>
+              
+                
+                <a class="source" href="it.html">
+                  it.js
+                </a>
+              
+                
+                <a class="source" href="magic8ball.html">
+                  magic8ball.js
+                </a>
+              
+                
+                <a class="source" href="maths.html">
+                  maths.js
+                </a>
+              
+                
+                <a class="source" href="missingLink.html">
+                  missingLink.js
+                </a>
+              
+                
+                <a class="source" href="probability.html">
+                  probability.js
+                </a>
+              
+                
+                <a class="source" href="shellShock.html">
+                  shellShock.js
+                </a>
+              
+                
+                <a class="source" href="stringifyElement.html">
+                  stringifyElement.js
+                </a>
+              
+                
+                <a class="source" href="svg.html">
+                  svg.js
+                </a>
+              
+                
+                <a class="source" href="templateGenerator.html">
+                  templateGenerator.js
+                </a>
+              
+                
+                <a class="source" href="unquote.html">
+                  unquote.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>templateGenerator.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">/***
+ * templateGenerator.js
+ * Experimental
+ *
+ * Author: Nicky Laczko
+ * License: MIT
+ */</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> Classy, Console, Fs, _;
+
+  Fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs-extra'</span>);
+
+  _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore-plus'</span>);
+
+  Console = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./consoleMessages'</span>);
+
+  Classy = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../specs/Classy'</span>);
+
+  Classy.Generator = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">template, css, js</span>) </span>{
+    <span class="hljs-keyword">var</span> processors;
+    processors = {
+      html: <span class="hljs-string">"views/index.html"</span>,
+      jade: <span class="hljs-string">"jade/views/index.jade"</span>,
+      haml: <span class="hljs-string">"haml/views/index.haml"</span>,
+      sass: <span class="hljs-string">"_sass/index.sass"</span>,
+      scss: <span class="hljs-string">"_scss/index.scss"</span>,
+      styl: <span class="hljs-string">"styl/index.styl"</span>,
+      less: <span class="hljs-string">"less/index.less"</span>,
+      js: <span class="hljs-string">"js/index.js"</span>,
+      coffee: <span class="hljs-string">"js/coffee/index.coffee"</span>,
+      babel: <span class="hljs-string">"js/es6/index.js"</span>
+    };
+    <span class="hljs-keyword">if</span> (template.indexOf(processors) &amp;&amp; css.indexOf(processors) &amp;&amp; js.indexOf(processors)) {
+      <span class="hljs-keyword">return</span> [template, css, js].forEach(Fs.createOutputStream(), <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-keyword">if</span> (!err) {
+          <span class="hljs-keyword">return</span> Console.Success(<span class="hljs-string">"pass!"</span>);
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> Console.error(<span class="hljs-string">"error!!"</span>);
+        }
+      });
+    }
+  };
+
+}).call(<span class="hljs-keyword">this</span>);</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
