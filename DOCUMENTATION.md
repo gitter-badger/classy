@@ -36,3 +36,6 @@
 > Note: `at` is optional
 
 - Generates text to tweet out.
+
+### Classy#unquote(String str)
+- Unescape html characters like ``&amp;``

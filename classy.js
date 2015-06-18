@@ -9,13 +9,13 @@
  */
 Classy = {
 	Maths: require('./src/maths')
-  , Probability: require('./src/probability')
   , missingLink: require('./src/missingLink')
   , magicBall: require('./src/magic8ball')
   , unquote: require('./src/unquote')
-
+  , svg: require('./src/svg')
   , Console: require('./src/consoleMessages')
   , createTweet: require('./src/createTweet')
+  , rubberDucky: require('./src/rubber_ducky')
 };
 
 module.exports = Classy;

@@ -7,9 +7,7 @@
   _ = require('underscore-plus');
 
   Classy.unquote = function(str) {
-    if (typeof str === "String") {
-      return _.escape(str);
-    }
+    return _.unescape(str);
   };
 
   module.exports = Classy.unquote;

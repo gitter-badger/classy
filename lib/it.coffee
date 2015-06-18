@@ -1,8 +1,9 @@
 # it.coffeee
 chalk = require 'chalk'
-Classy = require '../specs/Classy'
+_ = require 'underscore-plus'
+Console = require './consoleMessages'
 
-Classy.Highlight = (msg) ->
+_.extend Console, it, (msg) =>
 	it = chalk.blue.underline
 	return console.log it(msg)
 

@@ -7,5 +7,4 @@ node_js:
 before_install:
 	# Version check, cause we need the best npm version/latest
 	- npm install -g npm
-install:
-	- npm install
+	- npm install chalk underscore-plus request fs-extra

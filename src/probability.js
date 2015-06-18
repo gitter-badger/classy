@@ -16,7 +16,9 @@ Classy.Probability = function(result, percent) {
 	 * @arguments {percent} -> int
 	 * @returns Random percent that the result will happen
 	 */
-	var msg = 'Result:',
+	var msg = 'There is a ',
+		t = " that '" + result + "' will happen.",
+		chance = 0,
 	factors = {
 		wind: 5,
 		humidity: 2,
@@ -27,18 +29,21 @@ Classy.Probability = function(result, percent) {
 	// Narrow it down
 		switch(percent) {
 			case percent >= 33.3:
-			result = percent / factors.mad;
+			chance = percent / factors.mad;
+			return msg + chance + t;
 				break;
 			case percent <= 66.6:
-			result = percent - wind * angry
+			chance = percent - wind * angry
+			return msg + chance + t;
 				break;
 			case percent <= 99.9:
-			result = percent - humidity * cold - angry;
+			chance = percent - humidity * cold - angry;
+			return msg + chance + t;
 				break;
 			case percent == 100:
 				break;
 		}
-	return msg + result;
+	//return msg + chance + t;
 }
 
 module.exports = Classy.Probability;

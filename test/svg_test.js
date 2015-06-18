@@ -1,14 +1,8 @@
 // svg_test.js
 
-var Svg = require('../src/svg');
+var Classy = require('../classy');
 
 
 console.log(
-	Svg({
-		_class: "someTestClass",
-		w: 500,
-		h: 800,
-		shape: "circle",
-		style: "border-box: 0px;"
-	})
+	Classy.svg.Create('test-class', '400', '500', '30', '20', '70')
 );
