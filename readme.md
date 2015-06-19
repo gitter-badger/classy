@@ -1,5 +1,7 @@
 # Classy-Belt [![Build Status](https://travis-ci.org/RivalNick/classy.svg)](https://travis-ci.org/RivalNick/classy)[![Dependency Status](https://david-dm.org/rivalnick/classy.svg)](https://david-dm.org/rivalnick/classy)[![npm](https://img.shields.io/npm/v/npm.svg)]()[![npm](https://img.shields.io/npm/l/express.svg)]()
 
+[![Join the chat at https://gitter.im/RivalNick/classy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/RivalNick/classy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > A posh utility helper
 
 # install
